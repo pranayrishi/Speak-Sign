@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Text To Sign Language</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css') }}">
+	<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename= 'img/favicon.ico') }}" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename= 'js/postHandler.js') }}"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="http://127.0.0.1:5001">Text to Speech</a>
+    </div>
+	<div class="flex-container">
+		<div class="left-box">
+			<h1 id="label">N/A</h1>
+			<div id="container"></div>
+		</div>
+		<div class="right-box">
+			<div class="box" style="margin-bottom: 20px"> <!--janky way to make the margin spacing equal-->
+				<div class="title">Text To ASL</div>
+				<form id="inputForm">
+					<textarea id="message" name="message" placeholder="Translate from text to ASL"></textarea>
+					<button class ="light" type="submit" style="margin-left: auto; margin-right:auto;">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<script type="module" src="{{ url_for('static', filename= 'js/main.js') }}"></script>
+</body>
+
+</html>
